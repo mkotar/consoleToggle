@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>consoleToggle</title>
+    <script src="./consoleToggle.js"></script>
+    <script type="text/javascript">
+        consoleToggle({show: false, change: true});
+        // consoleToggle().display('hide');
+    </script>
+</head>
+<body>
+<h1>Console Toggle</h1>
+<p>Simple plugin that toggles the visibility of all console logs. <br />You can set visibility anytime you want buy using built in function or setting up the LocalStorage item manually</p>
+<p>This is useful if you want to hide all console logs in production and see them only if it is necessary</p>
+
+<h3>Usage</h3>
+<ol>
+	<li>Include the plugin on your page</li>
+	<li>Setup the function by setting two params: show and change</li>
+    <li>Remember that setting change parameter overwrites show parameter</li>
+</ol>
+<p>or see the source of this file.</p>
+<h3>Examples</h3>
+<ul>
+    <li>consoleToggle({show: false, change: true}); <- depends on LocalStorage value (if not present then show:false will be used)</li>
+    <li>consoleToggle({show: false, change: false}); <- comments will be hidden</li>
+    <li>consoleToggle({show: true}); <- comments will be displayed</li>
+    <li>consoleToggle({show: false}); <- comments will be hidden</li>
+</ul>
+<script type="text/javascript">
+    console.log('comment test');
+</script>
+</body>
+</html>
